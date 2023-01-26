@@ -98,8 +98,8 @@ class Game extends React.Component {
           <button
             style={
               move === this.state.stepNumber
-                ? { fontWeight: 'bold' }
-                : { fontWeight: 'inherit' }
+                ? { fontWeight: "bold" }
+                : { fontWeight: "inherit" }
             }
             onClick={() => this.jumpTo(move)}
           >
