@@ -120,10 +120,14 @@ class Game extends React.Component {
       const points = winner?.Points || [];
 
       points.map((i) => {
-        highlights[i] = true;
+        return highlights[i] = true;
       });
     } else {
-      status = "Next is: " + (this.state.xIsNext ? "X" : "O");
+      if (this.state.stepNumber === 9) {
+        status = "No Winner!";
+      }else{
+        status = "Next is: " + (this.state.xIsNext ? "X" : "O");
+      }
     }
 
     return (
